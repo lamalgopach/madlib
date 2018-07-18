@@ -8,9 +8,23 @@
 <h1>Madlibs</h1>
 
 <form action="/madlib">
-  Please type in a name of a person <input type="text" name="person">
-  <br>Please type in a color <input type="text" name="color">
-  <br>Please type in a noun <input type="text" name="noun">
+  Please type in a name of a person *<input type="text" name="person" required>
+  <br>Please type in a color <input type="checkbox" name="color1" value="blue">Blue
+  <input type="checkbox" name="color2" value="red">Red
+  <input type="checkbox" name="color3" value="pink">Pink
+
+
+  <br>Select an animal 
+  	<select name="animal">
+  		<option value="dog">Dog</option>
+  		<option value="bird">Bird</option>
+  		<option value="cat">Cat</option>
+  	</select>
+<!-- 
+  <input type="text" name="noun"> -->
+
+
+
   <br>Please type in an adjective <input type="text" name="adj">
   <br>
   <input type="submit">

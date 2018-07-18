@@ -5,7 +5,18 @@
 </head>
 <body>
 
-    Hi {{ person }}! I think you're like a {{ color }}, {{ adj}} {{ noun }}!
+    Hi {{ person }}! I think you're like a 
+    {% if color1=="blue" %}
+        {{color1}},
+    {% endif %}
+    {% if color2=="red" %}
+
+        {{color2}},
+    {% endif %}
+    {% if color3=="pink" %}
+        {{color3}},
+    {% endif %}
+    {{ adj}} {{ animal }}!
 
 </body>
 </html>
