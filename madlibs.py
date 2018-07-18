@@ -14,6 +14,7 @@ AWESOMENESS = [
     'smashing', 'lovely',
 ]
 
+MADLIBS = ["madlib.html", "madlib2.html"]
 
 @app.route('/')
 def start_here():
@@ -27,6 +28,7 @@ def say_hello():
     """Say hello to user."""
 
     return render_template("hello.html")
+
 
 
 @app.route('/greet')
@@ -60,7 +62,8 @@ def show_madlib():
     color3 = request.args.get("color3")
     animal = request.args.get("animal")
     adj = request.args.get("adj")
-    return render_template("madlib.html", person=person, 
+    madlib_choice = choice(MADLIBS)
+    return render_template(madlib_choice, person=person, 
                             color1=color1, color2=color2, color3=color3,
                              animal=animal, adj=adj)
 
